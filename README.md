@@ -1,2 +1,2 @@
 # QberixNotesResource
-This contains the 'resource' of Qberix Notes
+This contains the resource of Qberix Notes
