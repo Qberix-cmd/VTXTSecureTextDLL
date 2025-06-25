@@ -5,44 +5,9 @@
     <title>Secure text library download (VTXTSecureTextCore)
     </title>
     <style>
-        button {
-  background-color: #3498db; /* Màu xanh đẹp */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
 
-button:hover {
-  background-color: #2980b9; /* Màu hover đậm hơn */
-}
 
-button:active {
-  transform: scale(0.97); /* Hiệu ứng nhấn nhẹ */
-}
-a {
-  color: #007bff; /* Xanh nhẹ, dễ nhìn */
-  text-decoration: none; /* Bỏ gạch chân mặc định */
-  font-weight: 500;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
-}
 
-a:hover {
-  color: #0056b3; /* Đậm hơn khi hover */
-  text-decoration: underline; /* Hiện gạch chân khi rê chuột */
-}
-
-body.inverted a {
-  color: #4da3ff; /* Màu xanh nhẹ trong dark mode */
-}
-
-body.inverted a:hover {
-  color: #85c3ff;
-}
 
             body {
       font-family: Arial, Helvetica, sans-serif;
@@ -53,6 +18,7 @@ body.inverted a:hover {
       color: black;
       margin: 0;
       min-height: 100vh;
+      
     }
     .right
     {
@@ -95,20 +61,39 @@ body.inverted a:hover {
     <hr>
     <h1>A library that helps you encrypt plain text content securely and with a password</h1>
 <hr>
-<h3>This website let you download VTXTSecureTextCore</h3>
+<h3>This website lets you download VTXTSecureTextCore</h3>
 <a href="mailto:anhtumanhrem@gmail.com" class="right1">anhtumanhrem@gmail.com</a>
 <button id="THEMESWITCH" onclick="switchtheme();">Turn on dark mode</button>
+<br>
+<input type="checkbox">Auto change light or dark mode</input>
 <div class="right no-select COMPANYNAMESTYLE">Qberix</div>
 <hr>
 <h3>Latest version : </h3>
 <div><span style="color: red;">VTXTSecureTextCore</span> version 1.0.0.0</div>
-<a onclick="window.open('https://github.com/Qberix-cmd/QberixNotesResource/releases/tag/Version_1.0.0.0', 'about:blank')"href='#'>Download VTXTSecureTextCore version 1.0.0.0</a>
+<a onclick="window.open('https://github.com/Qberix-cmd/QberixNotesResource/releases/tag/Version_1.0.0.0', 'about:blank')"href='javascript:void(0)'>Download VTXTSecureTextCore version 1.0.0.0</a>
 <script>
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (isDarkMode)
-{
-    switchtheme();
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function applyTheme(darkMode) {
+  const body = document.body;
+  const themeButton = document.getElementById("THEMESWITCH");
+  if (darkMode) {
+    body.classList.add("inverted");
+    themeButton.textContent = "Turn off dark mode";
+  } else {
+    body.classList.remove("inverted");
+    themeButton.textContent = "Turn on dark mode";
+  }
 }
+
+// Áp dụng theme lúc trang vừa mở
+applyTheme(mediaQuery.matches);
+
+// Theo dõi thay đổi theo thời gian thực
+mediaQuery.addEventListener("change", (e) => {
+  applyTheme(e.matches);
+});
+
     function switchtheme()
     {
         document.body.classList.toggle('inverted');
@@ -122,4 +107,5 @@ document.getElementById("THEMESWITCH").textContent = "Turn off dark mode"
     }
     }
 </script>
+</body>
 </html>
