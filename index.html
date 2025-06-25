@@ -65,6 +65,11 @@
 <div><span style="color: red;">VTXTSecureTextCore</span> version 1.0.0.0</div>
 <a onclick="window.open('https://github.com/Qberix-cmd/QberixNotesResource/releases/tag/Version_1.0.0.0', 'about:blank')"href='#'>Download VTXTSecureTextCore version 1.0.0.0</a>
 <script>
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode)
+{
+    switchtheme();
+}
     function switchtheme()
     {
         document.body.classList.toggle('inverted');
