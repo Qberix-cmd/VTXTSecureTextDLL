@@ -26,14 +26,34 @@
     {
         color: red;
     }
+    body.inverted {
+  filter: invert(100%) hue-rotate(180deg);
+  background: black;
+}
+
 </style>
+</head>
 <body>
 <h2>VTXTSecureTextCore</h2>
 <hr>
 <h3>This website let you download VTXTSecureTextCore</h3>
+<button id="THEMESWITCH" onclick="switchtheme();">Turn on dark mode</button>
 <div class="right no-select COMPANYNAMESTYLE">Qberix</div>
 <hr>
 <div><span style="color: red;">VTXTSecureTextCore</span> version 1.0.0.0</div>
 <a onclick="window.open('https://github.com/Qberix-cmd/QberixNotesResource/releases/tag/Version_1.0.0.0', '_about:blank')"href='#'>Download VTXTSecureTextCore version 1.0.0.0</a>
-</head>
+<script>
+    function switchtheme()
+    {
+        document.body.classList.toggle('inverted');
+        if (document.getElementById("THEMESWITCH").textContent == "Turn on dark mode")
+    {
+document.getElementById("THEMESWITCH").textContent = "Turn off dark mode"
+    }
+    else
+    {
+        document.getElementById("THEMESWITCH").textContent = "Turn on dark mode"
+    }
+    }
+</script>
 </html>
