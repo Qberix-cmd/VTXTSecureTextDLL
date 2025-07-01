@@ -1,0 +1,12 @@
+﻿  dllmain.cpp
+C:\Users\THIS PC\source\repos\VTXTSecureTextCore\VTXTSecureTextCore\dllmain.cpp(32,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\THIS PC\source\repos\VTXTSecureTextCore\VTXTSecureTextCore\dllmain.cpp(101,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+     Creating library C:\Users\THIS PC\source\repos\VTXTSecureTextCore\x64\Release\VTXTSecureTextCore.lib and object C:\Users\THIS PC\source\repos\VTXTSecureTextCore\x64\Release\VTXTSecureTextCore.exp
+  Generating code
+  5 of 68 functions ( 7.4%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  VTXTSecureTextCore.vcxproj -> C:\Users\THIS PC\source\repos\VTXTSecureTextCore\x64\Release\VTXTSecureTextCore.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
